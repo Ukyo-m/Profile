@@ -6,5 +6,16 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [`gatsby-plugin-sass`],
+  plugins: [
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Noto Serif JP`
+        ],
+        display: 'swap'
+      }
+    }
+  ],
 }

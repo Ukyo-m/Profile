@@ -1,9 +1,24 @@
 import React from "react"
-import '../styles/common.scss'
 
 export default function Home() {
   return (
     <div className="container">
+      <header className="header">
+        <ul className="header--list">
+          <li className="header--list__item list__item--link">
+            <a href className="home list__item--link-item">Home</a>
+          </li>
+          <li className="header--list__item list__item--link">
+            <a href className="blog list__item--link-item">Blog</a>
+          </li>
+          <li className="header--list__item list__item--link">
+            <a href className="github list__item--link-item">GitHub</a>
+          </li>
+          <li className="header--list__item list__item--link">
+            <a href className="twitter list__item--link-item">Twitter</a>
+          </li>
+        </ul>
+      </header>
       <div className="fullPageScroll">
         <section id="section1" className="section section1">
           <div className="content">
@@ -42,17 +57,11 @@ export default function Home() {
           <div className="content">
             <div className="profile">
               <div className="profile--img">
-                <img src="/images/profile.jpg" alt="" />
+                <img src="img/profile.jpg" alt="" />
               </div>
               <div className="profile--detail">
                 <h3>プロフィール</h3>
-                <p>益子右匡。好きな言葉は「思い立ったが吉日」。仕事は素早く効率的に。</p>
-              </div>
-              <div className="profile--contact">
-                <h3>コンタクト</h3>
-                <ul>
-                  <li><a href="mailto:ukyo.mashiko@gmail.com">メール</a></li>
-                </ul>
+                <p>益子右匡。好きな言葉は「思い立ったが吉日」。「腹が減っては軍は出来ぬ」なので、ハングリー精神でやりたいことが多すぎて、かえってやる気が起きません。<br />割とこの業界の仕事は楽しいので、苦じゃないです。沢山お仕事ください。</p>
               </div>
             </div>
             <div className="career">
@@ -60,7 +69,7 @@ export default function Home() {
               <div className="career-box">
                 <div className="career-detail">
                   <div className="career-date">17<br /><span>4月</span></div>
-                  <div className="career-name">那須拓陽高等学校</div>
+                  <div className="career-name">栃木県立那須拓陽高等学校</div>
                   <div className="career-div">普通科</div>
                   <div className="carrer-status">卒業</div>
                 </div>
@@ -98,11 +107,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="section3" className="section section3">
-          <div className="content">
-            <h2>スキル</h2>
-          </div>
-        </section>
+
         <section id="section4" className="section section4">
           <div className="content">
             <h2>ワークス</h2>
@@ -110,20 +115,45 @@ export default function Home() {
               <li>サイト制作</li>
               <li>WordPressのテーマ制作</li>
               <li>Gatsby.jsを用いた静的サイト制作</li>
-              <li>水量管理システムのフロントコーディング</li>
+              <li>水量管理システムのフロント</li>
               <li>クローラー開発</li>
               <li>テキストマイニング</li>
               <li>共起ネットワーク</li>
               <li>テキスト分類</li>
               <li>コレスポンデンス分析</li>
+              <li>ネイティブアプリ制作</li>
+              <li>ネイティブアプリ自動化ツール</li>
             </ul>
+            <p>などなど</p>
           </div>
         </section>
-        <section id="section5" className="section section5">
+
+        <section id="section5" className="section section5 contact-form">
           <div className="content">
-            <h2>趣味</h2>
+            <h2>問い合わせ</h2>
+            <form className="contact-form" name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" defaultValue="contact" />
+              <div className="contact-form--info">
+                <div className="contact-form--info__name info__name">
+                  <label htmlFor className="info__name--label">お名前</label>
+                  <input type="text" className="info__name--input" />
+                </div>
+                <div className="contact-form--info__mail info__mail">
+                  <label htmlFor className="info__mail--label">メールアドレス</label>
+                  <input type="email" className="info__mail--input" />
+                </div>
+              </div>
+              <div className="contact-form--body">
+                <label htmlFor className="contact-form--body__label">内容</label>
+                <textarea name id className="contact-form--body__input" defaultValue={""} />
+              </div>
+              <div className="contact-form--submit">
+                <button className="contact-form--submit__btn">送信</button>
+              </div>
+            </form>
           </div>
         </section>
+
       </div>
       <nav id="pagination" className="pagination">
         <a id="pagination1" href="#section1">section 1</a>
@@ -132,6 +162,7 @@ export default function Home() {
         <a id="pagination4" href="#section4">section 4</a>
         <a id="pagination5" href="#section5">section 5</a>
       </nav>
+
     </div>
   )
 }
