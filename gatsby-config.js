@@ -8,13 +8,13 @@ module.exports = {
   /* Your site config here */
   plugins: [
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        fonts: [
-          `Noto Serif JP`
-        ],
-        display: 'swap'
+        name: `images`,
+        path: `${__dirname}/src/images/`,
       }
     }
   ],

@@ -1,6 +1,8 @@
 import React from "react"
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
 
-export default function Home() {
+export default function Home({ data }) {
   return (
     <div className="container">
       <header className="header">
@@ -57,10 +59,12 @@ export default function Home() {
           <div className="content">
             <div className="profile">
               <div className="profile--img">
-                <img src="img/profile.jpg" alt="" />
+                <figure>
+                  <Img fluid={data.file.childImageSharp.fluid} />
+                </figure>
               </div>
               <div className="profile--detail">
-                <h3>プロフィール</h3>
+                <h2>プロフィール</h2>
                 <p>益子右匡。好きな言葉は「思い立ったが吉日」。「腹が減っては軍は出来ぬ」なので、ハングリー精神でやりたいことが多すぎて、かえってやる気が起きません。<br />割とこの業界の仕事は楽しいので、苦じゃないです。沢山お仕事ください。</p>
               </div>
             </div>
@@ -166,3 +170,15 @@ export default function Home() {
     </div>
   )
 }
+
+export const query = graphql`
+query {
+  file(relativePath: {eq: "profile.jpg"}) {
+    childImageSharp {
+      fluid(maxWidth: 300){
+        ...GatsbyImageSharpFluid_withWebp
+      }
+    }
+  }
+}
+`;

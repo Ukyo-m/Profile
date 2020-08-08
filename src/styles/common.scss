@@ -4,6 +4,10 @@ $black:#707070;
 $orange: #F2A61C;
 
 @import "navi";
+@import "header";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&family=Sawarabi+Mincho');
+
 
 * {
   margin: 0;
@@ -17,11 +21,8 @@ h2 {
   color: $orange;
   margin: 0 0 15px;
   font-size: 30px;
-}
-
-h3 {
-  color: $green;
-  font-size: 20px;
+  font-family: 'Noto Serif JP', 'Sawarabi Mincho', serif;
+  font-weight: 500;
 }
 
 p {
@@ -35,56 +36,6 @@ a {
 
 .container {
   position: relative;
-}
-
-.header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 50px;
-  height: 50px;
-  z-index: 100;
-
-  &--list {
-    display: flex;
-    list-style: none;
-    height: 100%;
-    text-align: right;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: row;
-
-    &__item {
-      margin: 0 10px;
-
-      a {
-        position: relative;
-        font-size: 20px;
-        color: $black;
-        transition: ease 0.5s;
-
-        &::before {
-          content: "";
-          transition: ease 0.5s;
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          left: 0;
-          width: 0%;
-          height: 3px;
-          border-radius: 100px;
-        }
-
-        &:hover {
-          &::before {
-            background: $black;
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
 }
 
 .list__item {
@@ -135,12 +86,19 @@ a {
       width: 280px;
       padding: 15px;
 
+      h2 {
+        color: $green;
+        font-size: 20px;
+        font-family: 'メイリオ', sans-serif;
+        font-weight: bold;
+      }
+
       &--img {
         width: 100%;
         display: flex;
         margin-bottom: 30px;
 
-        img {
+        figure>div {
           width: 250px;
           height: 250px;
           border-radius: 100%;
@@ -153,7 +111,11 @@ a {
       margin: 0 0 0 20px;
       color: $black;
 
-      &-box {}
+      h2 {
+        width: 80px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
 
       &-detail {
         display: flex;
@@ -171,6 +133,9 @@ a {
         font-size: 30px;
         position: relative;
         z-index: 10;
+        font-family: 'Noto Serif JP', 'Sawarabi Mincho', serif;
+        font-weight: bold;
+
 
         &::before {
           content: "";
@@ -209,7 +174,8 @@ a {
         span {
           font-size: 15px;
           position: absolute;
-          bottom: 5px;
+          bottom: 10px;
+          font-family: 'Noto Serif JP', 'Sawarabi Mincho', serif;
         }
       }
 
@@ -351,6 +317,10 @@ a {
       color: #fff;
       font-weight: bold;
       font-size: 25px;
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
 
