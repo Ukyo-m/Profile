@@ -2,30 +2,16 @@ import React from "react"
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 
+import Layout from "../components/layout"
+
 export default function Home({ data }) {
   return (
-    <div className="container">
-      <header className="header">
-        <ul className="header--list">
-          <li className="header--list__item list__item--link">
-            <a href className="home list__item--link-item">Home</a>
-          </li>
-          <li className="header--list__item list__item--link">
-            <a href className="blog list__item--link-item">Blog</a>
-          </li>
-          <li className="header--list__item list__item--link">
-            <a href className="github list__item--link-item">GitHub</a>
-          </li>
-          <li className="header--list__item list__item--link">
-            <a href className="twitter list__item--link-item">Twitter</a>
-          </li>
-        </ul>
-      </header>
+    <Layout>
       <div className="fullPageScroll">
         <section id="section1" className="section section1">
           <div className="content">
             <h1>
-              <svg id="logo" className="logo" xmlns="http://www.w3.org/2000/svg" width={1000} viewBox="0 0 1005 293">
+              <svg id="logo" className="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1005 293">
                 <g id="グループ_45" data-name="グループ 45" transform="translate(-575.5 -615.186)">
                   <g id="グループ_42" data-name="グループ 42" transform="translate(913.889 686.274)">
                     <path id="パス_7" data-name="パス 7" d="M780.424,686.184H791.7l1.367,13.665h.512c8.029-8.882,17.936-16.057,28.7-16.057,14.349,0,21.866,7,25.453,17.936,9.907-10.589,19.646-17.936,30.749-17.936,18.792,0,28.016,12.471,28.016,36.044v26.138c0,6.6-14.009,6.6-14.009,0v-24.43c0-17.765-5.637-25.624-17.936-25.624-7.518,0-15.375,4.954-24.258,15.032v48.688c0,6.6-13.836,6.6-13.836,0v-38.1c0-17.765-5.639-25.624-18.108-25.624-7.176,0-15.375,4.954-24.087,15.032v67.478H780.424Z" transform="translate(-772.309 -641.343)" fill="#6bab93" />
@@ -159,15 +145,7 @@ export default function Home({ data }) {
         </section>
 
       </div>
-      <nav id="pagination" className="pagination">
-        <a id="pagination1" href="#section1">section 1</a>
-        <a id="pagination2" href="#section2">section 2</a>
-        <a id="pagination3" href="#section3">section 3</a>
-        <a id="pagination4" href="#section4">section 4</a>
-        <a id="pagination5" href="#section5">section 5</a>
-      </nav>
-
-    </div>
+    </Layout>
   )
 }
 
