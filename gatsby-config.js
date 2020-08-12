@@ -6,6 +6,12 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `mash!ko`,
+    description: `mash!koのサイト`,
+    lang: `ja`,
+    siteUrl: `https://youthful-saha-994ac6.netlify.app/`
+  },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
@@ -16,6 +22,7 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       }
-    }
+    },
+    `gatsby-plugin-react-helmet`,
   ],
 }

@@ -3,11 +3,13 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
+import Nav from "../components/nav"
 
 export default ({ data }) => {
   return (
     <Layout>
-
+      <SEO />
 
       <section id="section1" className="section section1">
         <div className="content">
@@ -176,6 +178,7 @@ export default ({ data }) => {
         </div>
       </section>
 
+      <Nav />
     </Layout>
   )
 }
