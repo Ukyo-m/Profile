@@ -25,5 +25,18 @@ module.exports = {
       }
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      option: {
+        name: `mash!ko`,
+        short_name: `mash!ko`,
+        start_url: `/`,
+        background: `#FFFFFF`,
+        theme_color: `#FBFDF0`,
+        display: `standalone`,
+        icon: `static/favicon.ico,`
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }
