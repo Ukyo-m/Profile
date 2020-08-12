@@ -1,6 +1,8 @@
 import React from "react"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
-export default function Home() {
+export default ({ data }) => {
   return (<div className="container">
     <div className="fullPageScroll">
       <header className="header">
@@ -61,9 +63,9 @@ export default function Home() {
         </p>
           <div className="career-block">
             <div className="career-left">
-              <div className="profile-image">
-                <img src="/images/profile.jpg" alt="" />
-              </div>
+              <figure className="profile-image">
+                <Img fluid={data.file.childImageSharp.fluid} alt="" />
+              </figure>
             </div>
             <div className="career-right">
               <h3>経歴</h3>
@@ -199,3 +201,16 @@ export default function Home() {
   </div>
   )
 }
+
+export const query = graphql`
+query {
+  file(relativePath: {eq: "profile.jpg"}) {
+    childImageSharp {
+      fluid(maxWidth: 200) {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+  }
+}
+`
+
