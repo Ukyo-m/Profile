@@ -1,14 +1,15 @@
 import React from "react"
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-export default ({ data }) => {
+export default ({ location }) => {
   return (
     <Layout>
-      <SEO />
+      <SEO
+        pagetitle="ページが見つかりません"
+        pagepath="location.pathname"
+      />
 
       <div className="notfound">
         <h1>お探しのページが見つかりませんでした</h1>
@@ -17,16 +18,3 @@ export default ({ data }) => {
     </Layout>
   )
 }
-
-export const query = graphql`
-query {
-  file(relativePath: {eq: "profile.jpg"}) {
-    childImageSharp {
-      fluid(maxWidth: 200) {
-        ...GatsbyImageSharpFluid_tracedSVG
-      }
-    }
-  }
-}
-`
-

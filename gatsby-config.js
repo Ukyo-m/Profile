@@ -10,7 +10,8 @@ module.exports = {
     title: `mash!ko`,
     description: `mash!koのサイト`,
     lang: `ja`,
-    siteUrl: `https://youthful-saha-994ac6.netlify.app/`
+    siteUrl: `https://youthful-saha-994ac6.netlify.app/`,
+    locale: `ja_JP`
   },
   plugins: [
     `gatsby-plugin-sass`,
