@@ -1,31 +1,79 @@
 $bg: #FBFDF0;
 $green: #6BAB93;
+<<<<<<< HEAD
 $black:#444444;
 $orange: #F2A61C;
 
 @import "navi";
+=======
+$black:#707070;
+$orange: #F2A61C;
+
+@import "navi";
+@import "header";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&family=Sawarabi+Mincho');
+
+>>>>>>> master
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: $black;
+<<<<<<< HEAD
   font-size: 16px;
 }
 
 body {
   background: $bg;
+=======
+  font-family: "メイリオ", sans-serif;
+}
+
+h2 {
+  color: $orange;
+  margin: 0 0 30px;
+  font-size: 40px;
+  font-family: 'Noto Serif JP', 'Sawarabi Mincho', serif;
+  font-weight: 500;
+  letter-spacing: 15px;
+  border-left: 5px solid $green;
+  padding-left: 10px;
+>>>>>>> master
 }
 
 p {
   margin-bottom: 2em;
+<<<<<<< HEAD
+=======
+  font-size: 16px;
+>>>>>>> master
 }
 
 a {
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 @import "header";
+=======
+.container {
+  position: relative;
+}
+
+.list__item {
+  &--link {
+    &-item {
+      svg {
+        width: 40px;
+        height: 40px;
+        color: $black;
+      }
+    }
+  }
+}
+>>>>>>> master
 
 .container {
   position: relative;
@@ -34,6 +82,7 @@ a {
 .fullPageScroll {
   width: 100%;
   height: 100vh;
+<<<<<<< HEAD
   overflow-y: auto;
 
   h2 {
@@ -79,10 +128,16 @@ a {
       left: -26px;
     }
   }
+=======
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+>>>>>>> master
 }
 
 .section {
   width: 100%;
+<<<<<<< HEAD
   margin: 100px auto 150px;
   position: relative;
 
@@ -101,11 +156,23 @@ a {
 
   .content {
     width: 1000px;
+=======
+  height: 100vh;
+  scroll-snap-align: start;
+  background: $bg;
+  position: relative;
+
+  .content {
+    background: $bg;
+    width: 1000px;
+    height: 100vh;
+>>>>>>> master
     margin: auto;
     padding: 60px 0;
   }
 }
 
+<<<<<<< HEAD
 .section1 {
 
   &::before {
@@ -221,10 +288,127 @@ a {
 
     &-detail {
       padding-left: 10px;
+=======
+.section2 {
+  .content {
+    display: flex;
+
+    .profile {
+      width: 280px;
+      padding: 15px;
+
+      h2 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+
+        &::before {
+          background: $orange;
+          width: 35px;
+          height: 35px;
+        }
+      }
+
+      &--img {
+        width: 100%;
+        display: flex;
+        margin-bottom: 30px;
+
+        figure>div {
+          width: 250px;
+          height: 250px;
+          border-radius: 100%;
+          margin: auto;
+        }
+      }
+    }
+
+    .career {
+      margin: 0 0 0 20px;
+      color: $black;
+
+      &-detail {
+        display: flex;
+        align-items: center;
+        margin: 20px 0 20px;
+        height: 100px;
+      }
+
+      &-date {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        font-size: 30px;
+        position: relative;
+        z-index: 10;
+        font-family: 'Noto Serif JP', 'Sawarabi Mincho', serif;
+        font-weight: bold;
+
+
+        &::before {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 70px;
+          height: 70px;
+          background: #fff;
+          border: 5px solid $green;
+          border-radius: 100px;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          margin: auto;
+          z-index: -1;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          margin: auto;
+          width: 5px;
+          height: 130px;
+          border-radius: 100px;
+          background: $green;
+          z-index: -2;
+        }
+
+
+        span {
+          font-size: 15px;
+          position: absolute;
+          bottom: 10px;
+          font-family: 'Noto Serif JP', 'Sawarabi Mincho', serif;
+        }
+      }
+
+      &-name {
+        font-weight: bold;
+        margin: 0 10px;
+        width: 200px;
+      }
+
+      &-div {
+        margin: 0 10px;
+        width: 200px;
+      }
+
+      &-status {
+        margin: 0 10px;
+      }
+>>>>>>> master
     }
   }
 }
 
+<<<<<<< HEAD
 .section5 {
   &::before {
     content: none;
@@ -290,10 +474,48 @@ a {
 
     &:hover {
       opacity: 0.6;
+=======
+.section3 {}
+
+.section4 {
+  .content {
+    display: flex;
+    flex-direction: row-reverse;
+
+    h2 {
+      writing-mode: tb-rl;
+      text-orientation: upright;
+      margin: 0 20px;
+      border-left: none;
+      border-top: 5px solid $green;
+      padding: 0;
+      padding-top: 10px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-top: 50px;
+    }
+
+    li,
+    p {
+      writing-mode: tb-rl;
+      text-orientation: upright;
+      margin: 0 9px;
+    }
+
+    p {
+      text-align: center;
+>>>>>>> master
     }
   }
 }
 
+<<<<<<< HEAD
+=======
+.section5 {}
+>>>>>>> master
 
 .contact-form {
 
@@ -382,6 +604,7 @@ a {
       font-size: 25px;
 
       &:hover {
+<<<<<<< HEAD
         opacity: 0.6;
       }
     }
@@ -406,4 +629,24 @@ footer {
       }
     }
   }
+=======
+        opacity: 0.7;
+      }
+    }
+  }
+
+}
+
+
+
+#logo {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 1000px;
+>>>>>>> master
 }
