@@ -7,14 +7,12 @@ import Nav from "../components/nav"
 export default ({ children }) => {
   return (
     <div className="container">
-      <div className="fullPageScroll">
-        <Header />
-
-        {children}
-
-        <Footer />
-      </div>
       <Nav />
+
+      {children}
+
+      <Header />
+      <Footer />
     </div>
   )
 }
