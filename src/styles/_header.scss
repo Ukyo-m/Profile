@@ -1,31 +1,16 @@
 .header {
-<<<<<<< HEAD
   margin: 0 50px;
   height: 50px;
-=======
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 50px;
-  height: 50px;
-  z-index: 100;
->>>>>>> master
 
   &--list {
     display: flex;
     list-style: none;
     height: 100%;
-<<<<<<< HEAD
-=======
-    text-align: right;
->>>>>>> master
     align-items: center;
     justify-content: flex-end;
     flex-direction: row;
 
     &__item {
-<<<<<<< HEAD
       margin: 0 20px;
       position: relative;
 
@@ -46,9 +31,6 @@
           content: none;
         }
       }
-=======
-      margin: 0 10px;
->>>>>>> master
 
       a {
         position: relative;
