@@ -2,25 +2,13 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
+import Layout from "../components/layout"
+
 export default ({ data }) => {
-  return (<div className="container">
-    <div className="fullPageScroll">
-      <header className="header">
-        <ul className="header--list">
-          <li className="header--list__item list__item--link">
-            <a href className="home list__item--link-item">Home</a>
-          </li>
-          <li className="header--list__item list__item--link">
-            <a href className="blog list__item--link-item">Blog</a>
-          </li>
-          <li className="header--list__item list__item--link">
-            <a href className="github list__item--link-item">GitHub</a>
-          </li>
-          <li className="header--list__item list__item--link">
-            <a href className="twitter list__item--link-item">Twitter</a>
-          </li>
-        </ul>
-      </header>
+  return (
+    <Layout>
+
+
       <section id="section1" className="section section1">
         <div className="content">
           <h1>
@@ -187,18 +175,8 @@ export default ({ data }) => {
           </form>
         </div>
       </section>
-      <footer>
-        <p>Copyright © 2020 <a href>mash!ko</a> All Rights Reserved.</p>
-      </footer>
-    </div>
-    <nav id="pagination" className="pagination">
-      <a id="pagination1" href="#section1">section 1</a>
-      <a id="pagination2" href="#section2">section 2</a>
-      <a id="pagination3" href="#section3">section 3</a>
-      <a id="pagination4" href="#section4">section 4</a>
-      <a id="pagination5" href="#section5">section 5</a>
-    </nav>
-  </div>
+
+    </Layout>
   )
 }
 
