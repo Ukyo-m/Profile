@@ -34,6 +34,8 @@ export default props => {
 
       <link ref="canonical" href={url} />
 
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+
       <meta property="og:site_name" content={metadata.title} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
