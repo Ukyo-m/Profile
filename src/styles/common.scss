@@ -3,7 +3,7 @@ $green: #6BAB93;
 $black:#444444;
 $orange: #F2A61C;
 
-@import "navi";
+@import "reset";
 
 * {
   margin: 0;
@@ -24,6 +24,10 @@ p {
 a {
   text-decoration: none;
 }
+
+@import "navi";
+
+
 
 @import "header";
 
@@ -83,7 +87,7 @@ h3 {
   &::before {
     content: "";
     position: absolute;
-    width: 1200px;
+    width: 80vw;
     height: 1px;
     background: #000;
     transform: rotate(2.3deg);
@@ -161,7 +165,7 @@ h3 {
 .section2 {
   .career {
     &-block {
-      margin-top: 30px;
+      margin-top: 60px;
       display: flex;
     }
 
@@ -169,6 +173,12 @@ h3 {
       .profile-image {
         width: 200px;
         height: 200px;
+
+        img {
+          width: 200px;
+          height: 200px;
+          border-radius: 100%;
+        }
 
         div {
           border-radius: 100%;
@@ -180,13 +190,7 @@ h3 {
       width: 100%;
       margin-left: 25px;
 
-      .profile-image {
-        img {
-          width: 200px;
-          height: 200px;
-          border-radius: 100%;
-        }
-      }
+      .profile-image {}
     }
 
     &-table {
@@ -306,7 +310,10 @@ h3 {
 
       &--label {
         margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
       }
+
 
       &--input {
         font-size: 20px;
@@ -327,6 +334,8 @@ h3 {
 
       &--label {
         margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
       }
 
       &--input {
@@ -347,6 +356,8 @@ h3 {
 
     &__label {
       margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
     }
 
     &__input {
@@ -417,3 +428,5 @@ footer {
     }
   }
 }
+
+@import "mobile";
