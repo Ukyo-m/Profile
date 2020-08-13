@@ -27,7 +27,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
-      option: {
+      options: {
         name: `mash!ko`,
         short_name: `mash!ko`,
         start_url: `/`,
