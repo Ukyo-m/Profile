@@ -157,4 +157,29 @@
       }
     }
   }
+
+  .header {
+    display: none;
+  }
+
+  .skill {
+    &-table {
+
+      &:before {
+        content: none;
+      }
+
+      &:after {
+        content: none;
+      }
+    }
+
+    &-card {
+      width: 45%;
+    }
+
+    &-name {
+      padding: 15px 0;
+    }
+  }
 }
