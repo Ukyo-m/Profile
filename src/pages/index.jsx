@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
@@ -6,6 +6,9 @@ import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Nav from "../components/nav"
+
+const targets = useRef(null)
+console.log("useRef", targets);
 
 let level = "初級"
 let percentage = 25;
@@ -84,7 +87,7 @@ export default ({ data }) => {
         <div className="content">
           <h2>自己紹介</h2>
           <p className="intro-text">
-            益子右匡。好きな言葉は「思い立ったが吉日」。「腹が減っては軍は出来ぬ」なので、ハングリー精神でやりたいことが多すぎて、かえってやる気が起きません。<br />割とこの業界の仕事は楽しいので、苦じゃないです。沢山お仕事ください。
+            Ukkyon。好きな言葉は「思い立ったが吉日」。「腹が減っては軍は出来ぬ」なので、ハングリー精神でやりたいことが多すぎて、かえってやる気が起きません。<br />割とこの業界の仕事は楽しいので、苦じゃないです。沢山お仕事ください。
         </p>
           <div className="career-block">
             <div className="career-left">
