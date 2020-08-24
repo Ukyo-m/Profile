@@ -1,4 +1,3 @@
-// import React, { useRef } from "react"
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -8,44 +7,41 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Nav from "../components/nav"
 
-// const targets = useRef(null)
-// console.log("useRef", targets);
-
-let level = "初級"
-let percentage = 25
-let skillName = ""
-
-function judgeLevel(value, name) {
-  switch (value) {
-    case "初級":
-      level = "初級"
-      percentage = 25
-      skillName = name
-      break
-    case "中級":
-      level = "中級"
-      percentage = 50
-      skillName = name
-      break
-    case "上級":
-      level = "上級"
-      percentage = 75
-      skillName = name
-      break
-    case "達人":
-      level = "達人"
-      percentage = 100
-      skillName = name
-      break
-    default:
-      level = "初級"
-      percentage = 25
-      skillName = name
-      break
-  }
-}
-
 export default ({ data }) => {
+  let level = "初級"
+  let percentage = 25
+  let skillName = ""
+
+  function judgeLevel(value, name) {
+    switch (value) {
+      case "初級":
+        level = "初級"
+        percentage = 25
+        skillName = name
+        break
+      case "中級":
+        level = "中級"
+        percentage = 50
+        skillName = name
+        break
+      case "上級":
+        level = "上級"
+        percentage = 75
+        skillName = name
+        break
+      case "達人":
+        level = "達人"
+        percentage = 100
+        skillName = name
+        break
+      default:
+        level = "初級"
+        percentage = 25
+        skillName = name
+        break
+    }
+  }
+
   return (
     <Layout>
       <SEO />
@@ -752,6 +748,7 @@ export default ({ data }) => {
       </section>
 
       <Nav />
+      {/* <Navigation /> */}
     </Layout>
   )
 }
