@@ -66,19 +66,19 @@ export default () => {
   return (
     <nav id="pagination" className="pagination">
       <a id="pagination1" href="#section1">
-        section 1
+        ホーム
       </a>
       <a id="pagination2" href="#section2">
-        section 2
+        自己紹介
       </a>
       <a id="pagination3" href="#section3">
-        section 3
+        スキル
       </a>
       <a id="pagination4" href="#section4">
-        section 4
+        最近の投稿
       </a>
       <a id="pagination5" href="#section5">
-        section 5
+        お問い合わせ
       </a>
     </nav>
   )
