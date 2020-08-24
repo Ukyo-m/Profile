@@ -51,6 +51,8 @@
         }
 
         &:hover {
+          text-decoration: none;
+
           &::before {
             background: $black;
             width: 100%;
