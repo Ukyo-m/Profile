@@ -7,13 +7,19 @@
   margin: auto 0 auto 45px;
   height: 360px;
 
-  a {
+  button {
     display: block;
     margin: 24px 0 24px 20px;
     transition: ease 0.5s;
     position: relative;
     text-decoration: none;
     color: $black;
+    background: none;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
 
     &::before {
       content: "";
