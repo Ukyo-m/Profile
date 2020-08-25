@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { CircularProgressbarWithChildren } from "react-circular-progressbar"
 
@@ -700,7 +700,7 @@ export default ({ data }) => {
             </div>
           </div>
           <div className="blog-btn">
-            <a href>もっと見る</a>
+            <Link to="/blog">もっと見る</Link>
           </div>
         </div>
       </section>
