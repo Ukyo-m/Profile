@@ -214,61 +214,69 @@ export default ({ data }) => {
       <section id="section2" className="section section2">
         <div className="content">
           <h2>自己紹介</h2>
-          <p className="intro-text">
-            Ukkyon。好きな言葉は「思い立ったが吉日」。「腹が減っては軍は出来ぬ」なので、ハングリー精神でやりたいことが多すぎて、かえってやる気が起きません。
-            <br />
-            割とこの業界の仕事は楽しいので、苦じゃないです。沢山お仕事ください。
-          </p>
-          <div className="career-block">
-            <div className="career-left">
+          <div className="intro">
+            <div className="intro-img">
               <figure className="profile-image">
                 <Img fluid={data.file.childImageSharp.fluid} alt="" />
               </figure>
             </div>
-            <div className="career-right">
-              <h3>経歴</h3>
-              <table className="career-table">
-                <tbody>
-                  <tr>
-                    <th className="career-date">2017年3月</th>
-                    <td className="career-detail">
-                      栃木県立那須拓陽高等学校 普通科 卒業
-                    </td>
-                  </tr>
-                  <tr>
-                    <th className="career-date">2018年4月</th>
-                    <td className="career-detail">
-                      HAL東京 高度情報処理学科 入学
-                    </td>
-                  </tr>
-                  <tr>
-                    <th className="career-date">2019年3月</th>
-                    <td className="career-detail">
-                      全研本社株式会社(アルバイト) イノベーション事業部
-                      コーダーとして従事
-                    </td>
-                  </tr>
-                  <tr>
-                    <th className="career-date">2020年1月</th>
-                    <td className="career-detail">
-                      全研本社株式会社 コミュニケーションプロダクツ事業部
-                      プログラマーとして従事
-                    </td>
-                  </tr>
-                  <tr>
-                    <th className="career-date">2020年7月</th>
-                    <td className="career-detail">全研本社株式会社 契約解除</td>
-                  </tr>
-                  <tr>
-                    <th className="career-date">2020年現在</th>
-                    <td className="career-detail">
-                      HAL東京 高度情報処理学科 3年次在学
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <p className="intro-text">
+              Ukkyon。好きな言葉は「思い立ったが吉日」。「腹が減っては軍は出来ぬ」なので、ハングリー精神でやりたいことが多すぎて、かえってやる気が起きません。
+              <br />
+              割とこの業界の仕事は楽しいので、苦じゃないです。沢山お仕事ください。
+              <br />
+              Web関係とPythonであればお仕事をさせていただきたいです。ここに書いていない言語や実績もありますので、是非、お問い合わせください。
+            </p>
           </div>
+          <h3>経歴</h3>
+          <table className="career-table">
+            <tbody>
+              <tr>
+                <th className="career-date">2017年3月</th>
+                <td className="career-detail">
+                  栃木県立那須拓陽高等学校 普通科 卒業
+                </td>
+              </tr>
+              <tr>
+                <th className="career-date">2018年4月</th>
+                <td className="career-detail">HAL東京 高度情報処理学科 入学</td>
+              </tr>
+              <tr>
+                <th className="career-date">2019年3月</th>
+                <td className="career-detail">
+                  全研本社株式会社(アルバイト) イノベーション事業部
+                  コーダーとして従事
+                </td>
+              </tr>
+              <tr>
+                <th className="career-date">2020年1月</th>
+                <td className="career-detail">
+                  全研本社株式会社 コミュニケーションプロダクツ事業部
+                  プログラマーとして従事
+                </td>
+              </tr>
+              <tr>
+                <th className="career-date">2020年7月</th>
+                <td className="career-detail">全研本社株式会社 契約解除</td>
+              </tr>
+              <tr>
+                <th className="career-date">2020年現在</th>
+                <td className="career-detail">
+                  HAL東京 高度情報処理学科 3年次在学
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>実績</h3>
+          <ul>
+            <li>WordPressのテーマ制作</li>
+            <li>コレスポンデンス分析による文書分類</li>
+            <li>共起ネットワークで文章の関連性の分析</li>
+            <li>水量管理システムのフロントコーディング</li>
+            <li>アプリケーションの自動操作</li>
+            <li>Webサイト制作</li>
+          </ul>
+          <p>などなど</p>
         </div>
       </section>
       <section id="section3" className="section section3">

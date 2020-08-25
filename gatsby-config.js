@@ -40,5 +40,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
   ],
 }
