@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 export default () => {
   var date = new Date()
@@ -8,7 +9,7 @@ export default () => {
   return (
     <footer>
       <p>
-        Copyright © {year} <a href>mash!ko</a> All Rights Reserved.
+        Copyright © {year} <Link to="/">mash!ko</Link> All Rights Reserved.
       </p>
     </footer>
   )
