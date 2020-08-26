@@ -684,8 +684,6 @@ export default ({ data }) => {
             name="contact"
             method="POST"
             data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            netlify
           >
             <input type="hidden" name="form-name" defaultValue="contact" />
             <div className="contact-form--info">
@@ -715,9 +713,7 @@ export default ({ data }) => {
                 内容
                 <textarea
                   name="message"
-                  id
                   className="contact-form--body__input"
-                  defaultValue={""}
                 />
               </label>
             </div>
