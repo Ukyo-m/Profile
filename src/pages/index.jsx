@@ -682,8 +682,9 @@ export default ({ data }) => {
           <form
             className="contact-form"
             name="contact"
-            method="POST"
+            method="post"
             data-netlify="true"
+            data-netlify-honeypot="bot-field"
           >
             <input type="hidden" name="form-name" defaultValue="contact" />
             <div className="contact-form--info">
