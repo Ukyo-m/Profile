@@ -682,22 +682,31 @@ export default ({ data }) => {
           <form
             className="contact-form"
             name="contact"
-            method="post"
+            method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
+            netlify
           >
             <input type="hidden" name="form-name" defaultValue="contact" />
             <div className="contact-form--info">
               <div className="contact-form--info__name info__name">
                 <label htmlFor className="info__name--label">
                   お名前
-                  <input type="text" className="info__name--input" />
+                  <input
+                    type="text"
+                    name="name"
+                    className="info__name--input"
+                  />
                 </label>
               </div>
               <div className="contact-form--info__mail info__mail">
                 <label htmlFor className="info__mail--label">
                   メールアドレス
-                  <input type="email" className="info__mail--input" />
+                  <input
+                    type="email"
+                    name="email"
+                    className="info__mail--input"
+                  />
                 </label>
               </div>
             </div>
@@ -705,7 +714,7 @@ export default ({ data }) => {
               <label htmlFor className="contact-form--body__label">
                 内容
                 <textarea
-                  name
+                  name="message"
                   id
                   className="contact-form--body__input"
                   defaultValue={""}
