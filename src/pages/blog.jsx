@@ -1,49 +1,69 @@
 import React from "react"
 
 import Layout from "../components/layout"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faClock,
+  faFolderOpen,
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons"
 
 export default () => {
   return (
     <Layout>
-      <div className="catcheye">
+      <div class="eyecatch">
         <figure>
-          <img src="/thumb.jpg" alt="キャッチアイ画像の説明" srcset="" />
+          <img src="thumb.jpg" alt="アイキャッチ画像の説明" />
+          {/* <img src="images-baseblog/eyecatch.jpg" alt="アイキャッチ画像の説明"> */}
         </figure>
       </div>
 
-      <article className="content">
-        <div className="container">
+      <article class="content">
+        <div class="container">
           <h1>記事のタイトル</h1>
 
-          <aside className="info">
-            <time datetime="XXXX-XX-XX">XXXX年XX月XX日</time>
-            <div className="cat">
+          <aside class="info">
+            <time datetime="XXXX-XX-XX">
+              <FontAwesomeIcon icon={faClock} />
+              XXXX年XX月XX日
+            </time>
+
+            <div class="cat">
+              <FontAwesomeIcon icon={faFolderOpen} />
               <ul>
-                <li className="slug">カテゴリーA</li>
-                <li className="slug">カテゴリーB</li>
+                <li class="スラッグ">カテゴリーＡ</li>
+                <li class="スラッグ">カテゴリーＢ</li>
               </ul>
             </div>
           </aside>
 
-          <div className="postbody">
+          <div class="postbody">
+            <h2>見出し２見出し２</h2>
+            <h3>見出し３見出し３</h3>
+            <h4>見出し４見出し４</h4>
             <p>
-              記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。記事の本文テキスト。
+              記事の本文です。記事の本文です。記事の本文です。記事の本文です。記事の本文です。
+              記事の本文です。記事の本文です。記事の本文です。記事の本文です。記事の本文です。
+              記事の本文です。記事の本文です。記事の本文です。記事の本文です。記事の本文です。
             </p>
           </div>
-        </div>
 
-        <ul className="postlink">
-          <li className="prev">
-            <a href="">
-              <span>前の記事</span>
-            </a>
-          </li>
-          <li className="next">
-            <a href="">
-              <span>次の記事</span>
-            </a>
-          </li>
-        </ul>
+          <ul class="postlink">
+            <li class="prev">
+              <a href="base-blogpost.html" rel="prev">
+                <FontAwesomeIcon icon={faChevronLeft} />
+                <span>前の記事</span>
+              </a>
+            </li>
+            <li class="next">
+              <a href="base-blogpost.html" rel="next">
+                <span>次の記事</span>
+                <FontAwesomeIcon icon={faChevronRight} />
+              </a>
+            </li>
+          </ul>
+        </div>
       </article>
     </Layout>
   )
