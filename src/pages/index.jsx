@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { CircularProgressbarWithChildren } from "react-circular-progressbar"
 
@@ -663,53 +663,17 @@ export default ({ data }) => {
       <section id="section4" className="section section4">
         <div className="content">
           <h2>最近の投稿</h2>
-          <div className="post-recent">
-            <div className="post-pre">
-              <div className="post-image"></div>
-              <div className="post-container">
-                <p className="post-title">投稿タイトル</p>
-                <div className="post-content">投稿内容５０文字まで</div>
-              </div>
-            </div>
-            <div className="post-pre">
-              <div className="post-image"></div>
-              <div className="post-container">
-                <p className="post-title">投稿タイトル</p>
-                <div className="post-content">投稿内容５０文字まで</div>
-              </div>
-            </div>
-            <div className="post-pre">
-              <div className="post-image"></div>
-              <div className="post-container">
-                <p className="post-title">投稿タイトル</p>
-                <div className="post-content">投稿内容５０文字まで</div>
-              </div>
-            </div>
-            <div className="post-pre">
-              <div className="post-image"></div>
-              <div className="post-container">
-                <p className="post-title">投稿タイトル</p>
-                <div className="post-content">投稿内容５０文字まで</div>
-              </div>
-            </div>
-            <div className="post-pre">
-              <div className="post-image"></div>
-              <div className="post-container">
-                <p className="post-title">投稿タイトル</p>
-                <div className="post-content">投稿内容５０文字まで</div>
-              </div>
-            </div>
-            <div className="post-pre">
-              <div className="post-image"></div>
-              <div className="post-container">
-                <p className="post-title">投稿タイトル</p>
-                <div className="post-content">投稿内容５０文字まで</div>
-              </div>
-            </div>
-          </div>
-          <div className="blog-btn">
-            <Link to="/blog">もっと見る</Link>
-          </div>
+          <p
+            style={{
+              textAlign: `center`,
+              height: `10vh`,
+              margin: `50px 0 0 0`,
+            }}
+          >
+            この部分はただいま工事中です。
+            <br />
+            近日公開予定です。
+          </p>
         </div>
       </section>
       <section id="section5" className="section section5">
