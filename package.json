@@ -28,6 +28,7 @@
     "gatsby-plugin-sharp": "^2.6.27",
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-source-filesystem": "^2.3.24",
+    "gatsby-source-microcms": "^0.2.0",
     "gatsby-transformer-sharp": "^2.5.13",
     "node-sass": "^4.14.1",
     "react": "^16.12.0",

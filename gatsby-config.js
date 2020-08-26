@@ -11,7 +11,7 @@ module.exports = {
     description: `mash!koのサイト`,
     lang: `ja`,
     siteUrl: `https://youthful-saha-994ac6.netlify.app/`,
-    locale: `ja_JP`
+    locale: `ja_JP`,
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -22,7 +22,7 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      }
+      },
     },
     `gatsby-plugin-react-helmet`,
     {
@@ -34,10 +34,21 @@ module.exports = {
         background: `#FFFFFF`,
         theme_color: `#FBFDF0`,
         display: `standalone`,
-        icon: `src/images/favicon.png`
+        icon: `src/images/favicon.png`,
       },
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-smoothscroll`,
+    {
+      resolve: `gatsby-source-microcms`,
+      options: {
+        apiKey: "58139d26-90ad-447f-8641-702321b9c698",
+        serviceId: "uuuuuukyo",
+        endpoint: "blog",
+        query: {
+          limit: 100,
+        },
+      },
+    },
   ],
 }
