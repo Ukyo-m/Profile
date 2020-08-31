@@ -1,6 +1,6 @@
 import React from "react"
-import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+import { Helmet } from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
 
 export default props => {
   const data = useStaticQuery(graphql`
@@ -15,14 +15,20 @@ export default props => {
         }
       }
     }
-  `);
+  `)
 
   const metadata = data.site.siteMetadata
-  const title = props.pagetitle ? `${props.pagetitle}|${metadata.title}` : metadata.title
+  const title = props.pagetitle
+    ? `${props.pagetitle}|${metadata.title}`
+    : metadata.title
   const description = props.pagedesc || metadata.description
-  const url = props.pagepath ? `${metadata.siteUrl}${props.pagepath}` : metadata.siteUrl
+  const url = props.pagepath
+    ? `${metadata.siteUrl}${props.pagepath}`
+    : metadata.siteUrl
 
-  const imgurl = props.pageimg ? `${metadata.siteUrl}${props.pageimg}` : `${metadata.siteUrl}/thumb.jpg`
+  const imgurl = props.pageimg
+    ? `${metadata.siteUrl}${props.pageimg}`
+    : `${metadata.siteUrl}/thumb.jpg`
   const imgw = props.pageimgw || 1200
   const imgh = props.pageimgh || 640
 
@@ -47,7 +53,12 @@ export default props => {
       <meta property="og:image:width" content={imgw} />
       <meta property="og:image:height" content={imgh} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta data-react-helmet="true" name="google-site-verification" content="google-site-verification=1ZWkdakKD83DTNmatSgS5IOifAXoiL6G4pjn3NSPfgM" />
+      {/* <meta data-react-helmet="true" name="google-site-verification" content="google-site-verification=1ZWkdakKD83DTNmatSgS5IOifAXoiL6G4pjn3NSPfgM" /> */}
+      <meta
+        data-react-helmet="true"
+        name="google-site-verification"
+        content="google-site-verification=Ni4b6vLxTcWFSgTxA96asKaCt6EegliR-Px6zuaVBA4"
+      />
     </Helmet>
   )
-};
+}
