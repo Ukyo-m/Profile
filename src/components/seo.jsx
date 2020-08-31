@@ -47,6 +47,7 @@ export default props => {
       <meta property="og:image:width" content={imgw} />
       <meta property="og:image:height" content={imgh} />
       <meta name="twitter:card" content="summary_large_image" />
+      <meta data-react-helmet="true" name="google-site-verification" content="google-site-verification=1ZWkdakKD83DTNmatSgS5IOifAXoiL6G4pjn3NSPfgM" />
     </Helmet>
   )
 };
