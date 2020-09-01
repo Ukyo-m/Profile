@@ -11,7 +11,7 @@ module.exports = {
     title: `mash!ko`,
     description: `mash!koのサイト`,
     lang: `ja`,
-    siteUrl: `https://youthful-saha-994ac6.netlify.app/`,
+    siteUrl: `https://www.mashiko.work/`,
     locale: `ja_JP`,
   },
   plugins: [
