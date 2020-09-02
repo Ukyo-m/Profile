@@ -1,5 +1,13 @@
 .blog-container {
   margin: 0 auto;
+
+  h1 {
+    margin-bottom: 40px;
+    font-size: 39px;
+    color: $green;
+    border-bottom: 5px dotted $orange;
+  }
+
 }
 
 /* コンテンツ */
@@ -13,18 +21,12 @@
     margin: auto;
   }
 
-  h1 {
-    margin-bottom: 40px;
-    font-size: 39px;
-    color: $green;
-    border-bottom: 5px dotted $orange;
-  }
 }
 
 .postbody {
   max-width: 800px;
 
-  > * {
+  >* {
     margin-bottom: 2em;
   }
 

@@ -3,7 +3,6 @@ import React from "react"
 export default () => {
   var date = new Date()
   var year = date.getFullYear()
-  console.log(year)
 
   return (
     <footer>

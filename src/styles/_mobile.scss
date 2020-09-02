@@ -158,6 +158,20 @@
     }
   }
 
+  .section4 {
+    .post {
+      figure {
+        height: 120px;
+        margin-bottom: 0;
+      }
+
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+
   .header {
     display: none;
   }
