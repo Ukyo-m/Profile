@@ -1,5 +1,4 @@
 .blog-container {
-  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -8,8 +7,6 @@
 .content {
   padding-top: 50px;
   padding-bottom: 40px;
-  margin-bottom: 80px;
-  background: #fff;
 
   .container {
     max-width: 800px;
@@ -25,8 +22,14 @@
 }
 
 .postbody {
+  max-width: 800px;
+
   > * {
     margin-bottom: 2em;
+  }
+
+  img {
+    width: 100%;
   }
 
   h2 {
@@ -37,7 +40,7 @@
     padding: 10px;
     position: relative;
     color: $orange;
-    margin-left: 25px;
+    margin: 50px 0 25px 0.5em;
     text-align: left;
 
     &::before {

@@ -8,46 +8,83 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons"
-// import { graphql } from "gatsby"
+import { graphql } from "gatsby"
+import Imgix from "react-imgix"
+import unified from "unified"
+import parse from "rehype-parse"
+import rehypeReact from "rehype-react"
 
-export default () => {
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+  Fragment: React.Fragment,
+  components: {
+    img: props => {
+      return (
+        <Imgix
+          src={props.src}
+          sizes="(max-width: 800px) 100vw 800px"
+          htmlAttributes={{
+            alt: props.alt,
+          }}
+        />
+      )
+    },
+  },
+}).Compiler
+
+export default ({ data, pageContext, location }) => {
+  const htmlAst = unified()
+    .use(parse, { fragment: true })
+    .parse(data.microcmsBlog.content)
+
   return (
     <Layout>
       <div className="blog-container">
         <div class="eyecatch">
           <figure>
-            <img src="thumb.jpg" alt="アイキャッチ画像の説明" />
+            <Imgix
+              src={data.microcmsBlog.eyecatch.url}
+              sizes="(max-width: 1600px) 100vw 1600px"
+            />
           </figure>
         </div>
 
         <article class="content">
           <div class="container">
-            <h1>記事のタイトル</h1>
+            <h1>{data.microcmsBlog.title}</h1>
 
             <aside class="info">
-              <time datetime="XXXX-XX-XX">
+              <time datetime={data.microcmsBlog.publishDate}>
                 <FontAwesomeIcon icon={faClock} />
-                XXXX年XX月XX日
+                {data.microcmsBlog.publishDateJP}
               </time>
 
               <div class="cat">
                 <FontAwesomeIcon icon={faFolderOpen} />
                 <ul>
-                  <li class="スラッグ">カテゴリーＡ</li>
-                  <li class="スラッグ">カテゴリーＢ</li>
+                  {data.microcmsBlog.category.map(cat => (
+                    <li className={cat.categorySlug} key={cat.id}>
+                      {cat.category}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </aside>
 
             <div class="postbody">
-              <h2>見出し２見出し２</h2>
+              {renderAst(htmlAst)}
+              {/* <div
+              class="postbody"
+              dangerouslySetInnerHTML={{ __html: data.microcmsBlog.content }}
+            > */}
+              {/* <h2>見出し２見出し２</h2>
               <h3>見出し３見出し３</h3>
               <h4>見出し４見出し４</h4>
               <p>
                 記事の本文です。記事の本文です。記事の本文です。記事の本文です。記事の本文です。
                 記事の本文です。記事の本文です。記事の本文です。記事の本文です。記事の本文です。
                 記事の本文です。記事の本文です。記事の本文です。記事の本文です。記事の本文です。
-              </p>
+              </p> */}
             </div>
 
             <ul class="postlink">
@@ -71,4 +108,21 @@ export default () => {
   )
 }
 
-// export const query = graphql``
+export const query = graphql`
+  query {
+    microcmsBlog {
+      title
+      publishDateJP: publishDate(formatString: "YYYY年MM月DD日")
+      publishDate
+      category {
+        category
+        categorySlug
+        id
+      }
+      eyecatch {
+        url
+      }
+      content
+    }
+  }
+`
