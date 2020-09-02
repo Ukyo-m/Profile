@@ -43,8 +43,19 @@ module.exports = {
       resolve: `gatsby-source-microcms`,
       options: {
         apiKey: "58139d26-90ad-447f-8641-702321b9c698",
-        serviceId: "uuuuuukyo",
+        serviceId: "mashiko",
         endpoint: "blog",
+        query: {
+          limit: 100,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-source-microcms`,
+      options: {
+        apiKey: "58139d26-90ad-447f-8641-702321b9c698",
+        serviceId: "mashiko",
+        endpoint: "category",
         query: {
           limit: 100,
         },
