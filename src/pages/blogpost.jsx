@@ -40,7 +40,7 @@ export default ({ data, pageContext, location }) => {
   return (
     <Layout>
       <div className="blog-container">
-        <div class="eyecatch">
+        <div className="eyecatch">
           <figure>
             <Imgix
               src={data.microcmsBlog.eyecatch.url}
@@ -49,17 +49,17 @@ export default ({ data, pageContext, location }) => {
           </figure>
         </div>
 
-        <article class="content">
-          <div class="container">
+        <article className="content">
+          <div className="container">
             <h1>{data.microcmsBlog.title}</h1>
 
-            <aside class="info">
+            <aside className="info">
               <time datetime={data.microcmsBlog.publishDate}>
                 <FontAwesomeIcon icon={faClock} />
                 {data.microcmsBlog.publishDateJP}
               </time>
 
-              <div class="cat">
+              <div className="cat">
                 <FontAwesomeIcon icon={faFolderOpen} />
                 <ul>
                   {data.microcmsBlog.category.map(cat => (
@@ -71,10 +71,10 @@ export default ({ data, pageContext, location }) => {
               </div>
             </aside>
 
-            <div class="postbody">
+            <div className="postbody">
               {renderAst(htmlAst)}
               {/* <div
-              class="postbody"
+              className="postbody"
               dangerouslySetInnerHTML={{ __html: data.microcmsBlog.content }}
             > */}
               {/* <h2>見出し２見出し２</h2>
@@ -87,14 +87,14 @@ export default ({ data, pageContext, location }) => {
               </p> */}
             </div>
 
-            <ul class="postlink">
-              <li class="prev">
+            <ul className="postlink">
+              <li className="prev">
                 <a href="base-blogpost.html" rel="prev">
                   <FontAwesomeIcon icon={faChevronLeft} />
                   <span>前の記事</span>
                 </a>
               </li>
-              <li class="next">
+              <li className="next">
                 <a href="base-blogpost.html" rel="next">
                   <span>次の記事</span>
                   <FontAwesomeIcon icon={faChevronRight} />
