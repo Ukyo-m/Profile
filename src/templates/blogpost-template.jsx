@@ -1,6 +1,7 @@
 import React from "react"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faClock,
@@ -8,11 +9,12 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Imgix from "react-imgix"
 import unified from "unified"
 import parse from "rehype-parse"
 import rehypeReact from "rehype-react"
+import htmlToText from "html-to-text"
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
@@ -39,6 +41,17 @@ export default ({ data, pageContext, location }) => {
 
   return (
     <Layout>
+      <SEO
+        pagetitle={data.microcmsBlog.title}
+        pagedesc={`${htmlToText
+          .fromString(data.microcmsBlog.content, {
+            ignoreImage: true,
+            ignoreHref: true,
+          })
+          .slice(0, 70)}...`}
+        pagepath={location.pathname}
+        imgurl={data.microcmsBlog.eyecatch.url}
+      />
       <div className="blog-container">
         <div className="eyecatch">
           <figure>
@@ -88,18 +101,25 @@ export default ({ data, pageContext, location }) => {
             </div>
 
             <ul className="postlink">
-              <li className="prev">
-                <a href="base-blogpost.html" rel="prev">
-                  <FontAwesomeIcon icon={faChevronLeft} />
-                  <span>前の記事</span>
-                </a>
-              </li>
-              <li className="next">
-                <a href="base-blogpost.html" rel="next">
-                  <span>次の記事</span>
-                  <FontAwesomeIcon icon={faChevronRight} />
-                </a>
-              </li>
+              {pageContext.next && (
+                <li className="prev">
+                  <Link to={`/blog/post/${pageContext.next.slug}`} rel="prev">
+                    <FontAwesomeIcon icon={faChevronLeft} />
+                    <span>{pageContext.next.title}</span>
+                  </Link>
+                </li>
+              )}
+              {pageContext.previous && (
+                <li className="next">
+                  <Link
+                    to={`/blog/post/${pageContext.previous.slug}`}
+                    rel="next"
+                  >
+                    <FontAwesomeIcon icon={faChevronRight} />
+                    <span>{pageContext.previous.title}</span>
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
         </article>
@@ -109,8 +129,8 @@ export default ({ data, pageContext, location }) => {
 }
 
 export const query = graphql`
-  query {
-    microcmsBlog {
+  query($id: String!) {
+    microcmsBlog(id: { eq: $id }) {
       title
       publishDateJP: publishDate(formatString: "YYYY年MM月DD日")
       publishDate
