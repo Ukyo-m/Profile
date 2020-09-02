@@ -39,6 +39,16 @@ export default ({ data, pageContext, location }) => {
     .use(parse, { fragment: true })
     .parse(data.microcmsBlog.content)
 
+  let imgUrl = "/thumb.jpg"
+  console.log(data.microcmsBlog.eyecatch);
+
+  if (!data.microcmsBlog.eyecatch) {
+    imgUrl = "/thumb.jpg"
+  } else {
+    imgUrl = data.microcmsBlog.eyecatch.url
+
+  }
+
   return (
     <Layout>
       <SEO
@@ -50,13 +60,13 @@ export default ({ data, pageContext, location }) => {
           })
           .slice(0, 70)}...`}
         pagepath={location.pathname}
-        imgurl={data.microcmsBlog.eyecatch.url}
+        imgurl={imgUrl}
       />
       <div className="blog-container">
         <div className="eyecatch">
           <figure>
             <Imgix
-              src={data.microcmsBlog.eyecatch.url}
+              src={imgUrl}
               sizes="(max-width: 1600px) 100vw 1600px"
             />
           </figure>
