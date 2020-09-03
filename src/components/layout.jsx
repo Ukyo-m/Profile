@@ -11,7 +11,9 @@ export default ({ children }) => {
     <div className="container">
       <Header />
 
-      {children}
+      <main className="main">
+        {children}
+      </main>
 
       <Footer />
     </div>

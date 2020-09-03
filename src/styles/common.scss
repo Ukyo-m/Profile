@@ -29,11 +29,16 @@ a {
 
 @import "header";
 
+main.main {
+  min-height: 100vh;
+}
+
 .container {
   position: relative;
 }
 
-h2 {
+h2,
+.blog-page h1 {
   color: $green;
   text-align: center;
   margin: 0 0 15px;
@@ -220,7 +225,8 @@ h3 {
   }
 }
 
-.section4 {
+.section4,
+.blog-page {
   .posts {
     display: flex;
     flex-wrap: wrap;
@@ -255,6 +261,11 @@ h3 {
       }
     }
   }
+}
+
+.blog-page {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .section5 {
