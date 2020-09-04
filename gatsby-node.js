@@ -53,23 +53,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   /**
    * 記事一覧の設定
-  */
-  const blogPostsPerPage = 6 // １ページに表示する記事の数
+   */
+  const blogPostPerPage = 6 // 1ページあたりに表示する記事の数
   const blogPosts = blogresult.data.allMicrocmsBlog.edges.length // 記事の総数
-  const blogPages = Math.ceil(blogPosts / blogPostsPerPage) // 記事一覧ページの総数
+  const blogPages = Math.ceil(blogPosts / blogPostPerPage) // 記事一覧パージの総数
 
   Array.from({ length: blogPages }).forEach((_, i) => {
-    console.log("ブログページ", i);
-
     createPage({
-      path: i === 0 ? `/blog/` : `/blog/${i + 1}/`,
+      path: i === 0 ? `/blog/` : `/blog/${i + 1}`,
       component: path.resolve("./src/templates/blog-template.jsx"),
       context: {
-        skip: blogPostsPerPage * i,
-        limit: blogPostsPerPage,
-        currentPage: i + 1, // 現在のページ番号
+        skip: blogPostPerPage * i,
+        limit: blogPostPerPage,
+        currentPage: i + 1, // 現在のページ
         isFirst: i + 1 === 1, // 最初のページ
-        isLast: i + 1 === blogPages, // 最後のページ
+        isLast: i + 1 === blogPages, // 最初のページ
       },
     })
   })
