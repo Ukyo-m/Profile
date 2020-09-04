@@ -226,6 +226,9 @@ h3 {
 .section4,
 .blog-page {
   .posts {
+.section4,
+.blog-page {
+  .posts {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -245,6 +248,9 @@ h3 {
     img {
       width: 100%;
     }
+    img {
+      width: 100%;
+    }
 
     &-title {
       padding: 0;
@@ -258,6 +264,29 @@ h3 {
         content: none;
       }
     }
+  }
+}
+
+    &-title {
+      padding: 0;
+      margin: 0;
+      font-size: 18px;
+      border: none;
+      color: $black;
+      padding: 20px 10px;
+
+      &::before {
+        content: none;
+      }
+    }
+.blog-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section5 {
+  &::before {
+    content: none;
   }
 }
 
