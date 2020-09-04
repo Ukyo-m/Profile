@@ -1,0 +1,192 @@
+.blog-container {
+  margin: 0 auto;
+
+  h1 {
+    margin-bottom: 40px;
+    font-size: 39px;
+    color: $green;
+    border-bottom: 5px dotted $orange;
+  }
+
+}
+
+/* コンテンツ */
+
+.content {
+  padding: 50px 20px 40px;
+
+  .container {
+    max-width: 800px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  img {
+    width: 100%;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+
+
+.postbody {
+  max-width: 800px;
+
+  >* {
+    margin-bottom: 2em;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h2 {
+    color: $black;
+    font-size: 31px;
+    border-top: 2px solid $black;
+    border-left: 2px solid $black;
+    padding: 10px;
+    position: relative;
+    color: $orange;
+    margin: 50px 0 25px 0.5em;
+    text-align: left;
+
+    &::before {
+      content: "";
+      position: absolute;
+      transform: rotate(-45deg);
+      width: 50px;
+      height: 2px;
+      background: $black;
+      top: -3px;
+      bottom: auto;
+      left: -26px;
+      right: auto;
+      border: none;
+    }
+  }
+
+  h3 {
+    font-size: 25px;
+    margin-left: 0;
+    border: none;
+    border-left: 5px solid $green;
+    color: $black;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  h4 {
+    font-size: 20px;
+    border-bottom: 2px solid $black;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+
+  ul {
+    padding-left: 30px;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding-top: 70px;
+    padding-bottom: 60px;
+  }
+}
+
+/* キャッチアイ */
+.eyecatch {
+  overflow: hidden;
+
+
+}
+
+/* コンテンツの情報 */
+
+.info {
+  margin-bottom: 43px;
+  color: #477294;
+  font-size: 14px;
+
+  [class*="fa-"] {
+    margin-right: 10px;
+  }
+
+  time {
+    margin-bottom: 5px;
+  }
+
+  .cat {
+    ul {
+      list-style: none;
+      display: inline-flex;
+    }
+
+    li:not(:last-child)::after {
+      content: "・";
+      margin: 0 5px;
+    }
+  }
+}
+
+/*
+#################################
+ブログ
+#################################
+*/
+
+/* ブログ記事の情報 */
+
+@media (min-width: 768px) {
+  .info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+}
+
+/* 前後の記事へのリンク */
+
+.postlink {
+  margin-top: 4em;
+  list-style: none;
+  color: #477294;
+  font-size: 14px;
+  display: flex;
+
+  li {
+    width: 48%;
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  .next {
+    margin-left: auto;
+    justify-content: flex-end;
+  }
+
+  .prev [class*="fa-"] {
+    margin-right: 10px;
+  }
+
+  .next [class*="fa-"] {
+    margin-left: 10px;
+  }
+}

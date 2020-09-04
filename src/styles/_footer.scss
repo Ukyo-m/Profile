@@ -1,0 +1,19 @@
+footer {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+
+  p {
+    margin: 0;
+
+    a {
+      border-bottom: 1px solid #000;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}

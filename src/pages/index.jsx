@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { CircularProgressbarWithChildren } from "react-circular-progressbar"
 
@@ -663,19 +663,37 @@ export default ({ data }) => {
       <section id="section4" className="section section4">
         <div className="content">
           <h2>最近の投稿</h2>
-          <p
-            style={{
-              textAlign: `center`,
-              height: `10vh`,
-              margin: `50px 0 0 0`,
-            }}
-          >
-            この部分はただいま工事中です。
-            <br />
-            近日公開予定です。
-          </p>
+          <div className="posts">
+            {data.allMicrocmsBlog.edges.map(function ({ node }) {
+              let imgUrl = ""
+
+              // アイキャッチがあるかの判断
+              if (!node.eyecatch) {
+                imgUrl = "/thumb.jpg"
+
+              } else {
+                imgUrl = node.eyecatch.url
+              }
+
+              return (
+                <article className="post" key={node.id}>
+                  <Link to={`blog/post/${node.slug}`}>
+
+                    <figure>
+                      <img src={imgUrl} alt="" />
+                    </figure>
+                    <h3 className="post-title">{node.title}</h3>
+                  </Link>
+                </article>
+              )
+            })}
+          </div>
+          <div className="blog-btn">
+            <Link to="/blog">もっと見る</Link>
+          </div>
         </div>
       </section>
+
       <section id="section5" className="section section5">
         <div className="content">
           <h2>お問い合わせ</h2>
@@ -737,6 +755,18 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 200) {
           ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    allMicrocmsBlog(sort: {order: DESC, fields: publishDate}, limit: 5, skip: 0) {
+      edges {
+        node {
+          title
+          id
+          slug
+          eyecatch{
+            url
+          }
         }
       }
     }
