@@ -28,7 +28,6 @@
     "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.27",
-    "gatsby-plugin-sitemap": "^2.4.12",
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-source-filesystem": "^2.3.24",
     "gatsby-source-microcms": "^0.2.0",
@@ -46,6 +45,7 @@
     "unified": "^9.2.0"
   },
   "devDependencies": {
+    "gatsby-plugin-sitemap": "^2.8.0",
     "prettier": "2.0.5"
   },
   "repository": {
