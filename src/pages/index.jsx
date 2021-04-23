@@ -260,9 +260,9 @@ export default ({ data }) => {
                 <td className="career-detail">全研本社株式会社 契約解除</td>
               </tr>
               <tr>
-                <th className="career-date">2020年現在</th>
+                <th className="career-date">2021年現在</th>
                 <td className="career-detail">
-                  HAL東京 高度情報処理学科 3年次在学
+                  HAL東京 高度情報処理学科 4年次在学
                 </td>
               </tr>
             </tbody>
@@ -275,6 +275,7 @@ export default ({ data }) => {
             <li>水量管理システムのフロントコーディング</li>
             <li>アプリケーションの自動操作</li>
             <li>Webサイト制作</li>
+            <li>倉庫管理システムのハンディ開発</li>
           </ul>
           <p>などなど</p>
         </div>
